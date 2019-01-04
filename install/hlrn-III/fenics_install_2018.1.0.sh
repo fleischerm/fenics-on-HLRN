@@ -9,7 +9,6 @@
 # boost_1_62_0.tar.gz
 # eigen3_3.3.3.tar.bz2
 # petsc-3.8.4.tar.gz
-# 	petsc4py-3.9.0.tar.gz
 # 	hdf5-1.8.18.tar.gz
 # 	fblaslapack-3.4.2.tar.gz
 
@@ -62,12 +61,10 @@ cd && rm -rf petsc-3.8.4/ && tar -xvf petsc-3.8.4.tar.gz && cd petsc-3.8.4/ && p
 --download-hypre \
 --download-parmetis \
 --download-metis \
---download-petsc4py-python=python3 \
 --download-ptscotch \
 --download-fblaslapack=$HOME/fblaslapack-3.4.2.tar.gz \
 --download-hdf5=$HOME/hdf5-1.8.18.tar.gz \
 --download-scalapack \
---download-petsc4py=$HOME/petsc4py-3.9.0.tar.gz \
 --with-debugging=no \
 --with-shared-libraries \
 COPTFLAGS='-O3 -march=native -mtune=native'CXXOPTFLAGS='-O3 -march=native -mtune=native' FOPTFLAGS='-O3-march=native -mtune=native' && make PETSC_DIR=$HOME/petsc-3.8.4 PETSC_ARCH=arch-linux2-c-opt all && make PETSC_DIR=$HOME/petsc-3.8.4 PETSC_ARCH=arch-linux2-c-opt test && make PETSC_DIR=$HOME/petsc-3.8.4 PETSC_ARCH=arch-linux2-c-opt streams
