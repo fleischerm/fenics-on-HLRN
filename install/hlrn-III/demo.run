@@ -4,6 +4,6 @@
 #PBS -l nodes=2:ppn=12
 #PBS -l walltime=00:30:00
 
-source $HOME/.bashrc
+source $HOME/fenics_predefinitions.sh
 
 aprun -B -b python3 demo_poisson.py
